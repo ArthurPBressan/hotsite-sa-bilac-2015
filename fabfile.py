@@ -6,7 +6,7 @@ from fabtools.python import virtualenv
 
 from fabric.api import env, sudo, cd, settings
 
-env.host_string = 'root@45.55.252.189'
+env.host_string = 'root@159.203.118.4'
 
 HOTSITE_WORK_PATH = '/root/hotsite/'
 
@@ -26,8 +26,7 @@ def setup():
             python.install('uwsgi')
     deploy()
     with cd(HOTSITE_WORK_PATH), virtualenv(HOTSITE_WORK_PATH):
-        sudo('python manage.py ci criar_usuario admin 123456')
-        sudo('uwsgi --socket :8080 --module="hotsite:create_app()" --touch-reload="/root/uwsgi_file"')
+        sudo('uwsgi --socket :8080 --module="hotsite:create_app()" --touch-reload="/root/uwsgi_file" &')
 
 
 def deploy():
