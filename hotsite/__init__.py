@@ -4,7 +4,7 @@ from __future__ import absolute_import
 from flask import Flask
 from flask.ext.assets import Environment
 
-from hotsite import base, models, admin
+from hotsite import base, models, admin, rotas
 
 
 def create_app(config=None):
@@ -19,9 +19,6 @@ def create_app(config=None):
     base.init_app(app)
     models.init_app(app)
     admin.init_app(app)
-
-    @app.route('/')
-    def index():
-        return "Hello world"
+    rotas.init_app(app)
 
     return app
