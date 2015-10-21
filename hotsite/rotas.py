@@ -2,9 +2,7 @@
 from __future__ import absolute_import
 
 from flask import Blueprint, render_template
-from ordered_set import OrderedSet
 
-from hotsite.base import db
 from hotsite.models import Palestra
 
 bp = Blueprint('palestras', __name__)
@@ -16,18 +14,11 @@ def init_app(app):
 
 @bp.route('/')
 def index():
-    partial_palestras_q = \
-        db.session.query(Palestra.trilha, Palestra.hora_inicio, Palestra.dia) \
-        .order_by(Palestra.trilha, Palestra.dia, Palestra.hora_inicio)
-
-    trilhas = OrderedSet(palestra.trilha for palestra in partial_palestras_q)
-    dias = OrderedSet(palestra.dia for palestra in partial_palestras_q)
-    horarios = OrderedSet(palestra.hora_inicio for palestra in partial_palestras_q)
-
     palestras = {}
-    for palestra in Palestra.query.all():
-        _trilha_map = palestras.setdefault(palestra.trilha, {})
-        _dia_map = _trilha_map.setdefault(palestra.dia, {})
-        _dia_map.setdefault(palestra.hora_inicio, palestra)
-    return render_template('index.html', trilhas=trilhas, dias=dias,
-                           horarios=horarios, palestras=palestras)
+    palestras_q = Palestra.query.order_by(Palestra.trilha, Palestra.dia,
+                                          Palestra.hora_inicio)
+    for palestra in palestras_q:
+        palestras_trilha = palestras.setdefault(palestra.trilha, [])
+        palestras_trilha.append(palestra)
+    trilhas = set(palestra.trilha for palestra in palestras_q)
+    return render_template('index.html', palestras=palestras, trilhas=trilhas)

@@ -1,24 +1,46 @@
 {% macro desenha_tabela(trilha) %}
-    {{ trilha }}
     <table border="1">
-    <tr>
-        <th></th>
-        {% for dia in dias %}
-            <th>
-                {{ dia.strftime('%A') }}
-            </th>
-        {% endfor %}
-    </tr>
-    {% for horario in horarios %}
         <tr>
             <th>
-                {{ horario.strftime('%H:%M') }}
+                Dia
             </th>
-            {% for dia in dias %}
+            <th>
+                Data
+            </th>
+            <th>
+                Horário
+            </th>
+            <th>
+                Titulo
+            </th>
+            <th>
+                Autor
+            </th>
+            <th>
+                Resumo
+            </th>
+        </tr>
+    {% for palestra in palestras[trilha] %}
+        <tr>
             <td>
-                {{ palestras[trilha][dia][horario] }}
+                {# {{ format_date(palestra.dia, '%A') }} #}
+                {{ palestra.dia.strftime('%A').decode('utf-8').title() }}
             </td>
-            {% endfor %}
+            <td>
+                {{ palestra.dia.strftime('%x').replace('-','/') }}
+            </td>
+            <td>
+                {{ palestra.hora_inicio.strftime('%X') }} a {{ palestra.hora_fim.strftime('%X') }}
+            </td>
+            <td>
+                {{ palestra.titulo }}
+            </td>
+            <td>
+                {{ palestra.autor }}
+            </td>
+            <td>
+                {{ palestra.resumo }}
+            </td>
         </tr>
     {% endfor %}
     </table>
