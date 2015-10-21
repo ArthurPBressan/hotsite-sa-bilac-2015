@@ -23,7 +23,6 @@
     {% for palestra in palestras[trilha] %}
         <tr>
             <td>
-                {# {{ format_date(palestra.dia, '%A') }} #}
                 {{ palestra.dia.strftime('%A').decode('utf-8').title() }}
             </td>
             <td>
