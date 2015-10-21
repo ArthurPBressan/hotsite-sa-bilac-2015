@@ -21,7 +21,7 @@ body {
 	letter-spacing: 1.5px;
 
 	/* for boxed layout */
-	background-image: url(../img/boxed-bg.jpg);
+	background-image: url(/static/img/boxed-bg.jpg);
 	background-color: #E1E1E1;
 	background-position: center center;
 	background-attachment: fixed;
@@ -41,7 +41,7 @@ body #body-container {
 	background-color: #FFF;  /* for full width layout */
 	padding-top: 50px;
 }
-.container { 
+.container {
 	position: relative;
 }
 
@@ -50,7 +50,7 @@ body #body-container {
 	-webkit-border-radius: 0 !important;
 	-moz-border-radius: 0 !important;
 }
-*:focus { 
+*:focus {
 	outline: none !important;
 	box-shadow: none !important;
 }
@@ -129,7 +129,7 @@ a, a:hover, a:focus {
 	width: 100%;
 	height: 100%;
 	z-index: 99999;
-	background: #FFF url(../img/page-loader.gif) center center no-repeat;
+	/*background: #FFF url(/static/img/page-loader.gif) center center no-repeat;*/
 }
 .cover {
 	position: absolute;
@@ -170,7 +170,7 @@ a, a:hover, a:focus {
 }
 
 #header {
-	/* height: 98px; */ /* For non-transparent navbar */ 
+	/* height: 98px; */ /* For non-transparent navbar */
 }
 
 /* ===== Begin text colors ===== */
@@ -349,16 +349,16 @@ body.boxed .body .navbar-default .container {
 	transition: all 0.2s ease-in-out;
 }
 .navbar-default .navbar-brand {
-	background-image: url(../img/logo-alter.png);
+	background-image: url(/static/img/logo-alter.png);
 }
 .navbar-transparent .navbar-brand {
-	background-image: url(../img/logo-main.png);
+	background-image: url(/static/img/logo-main.png);
 }
 .navbar-shrink .navbar-brand {
-	background-image: url(../img/logo-alter.png);
+	background-image: url(/static/img/logo-alter.png);
 }
 .navbar-inverse .navbar-brand {
-	background-image: url(../img/logo-main.png);
+	background-image: url(/static/img/logo-main.png);
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:focus {
@@ -782,10 +782,10 @@ video.bgvid {
 /* ===== End page header ===== */
 
 /* ===== Begin heading ===== */
-.heading { 
+.heading {
 	margin-bottom: 30px;
 }
-.heading h3 { 
+.heading h3 {
 	margin: 0;
 }
 /* ===== End heading ===== */
@@ -1345,13 +1345,13 @@ video.bgvid {
 	opacity: .5;
 }
 .owl-next {
-	background-image: url(../img/arrow-right.png) !important;
+	background-image: url(/static/img/arrow-right.png) !important;
 	background-repeat: no-repeat !important;
 	background-position: center !important;
 	right: 0;
 }
 .owl-prev {
-	background-image: url(../img/arrow-left.png) !important;
+	background-image: url(/static/img/arrow-left.png) !important;
 	background-repeat: no-repeat !important;
 	background-position: center !important;
 	left: 0;
@@ -1919,7 +1919,7 @@ transform: rotate(-45deg);
 
 /* ===== Begin featured box ===== */
 .featured-box {
-	background-image: url(../img/struckaxiom.png);
+	background-image: url(/static/img/struckaxiom.png);
 	padding: 40px 0;
 	color: #222;
 }
@@ -2197,22 +2197,22 @@ transform: rotate(-45deg);
 	-moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
 }
-.switcher-box.default { 
+.switcher-box.default {
 	background-color: #b5121b ;
 }
-.switcher-box.green { 
+.switcher-box.green {
 	background-color: #4B9D13;
 }
-.switcher-box.brown { 
+.switcher-box.brown {
 	background-color: #AB915A;
 }
-.switcher-box.blue { 
+.switcher-box.blue {
 	background-color: #3078B3;
 }
-.switcher-box.purple { 
+.switcher-box.purple {
 	background-color: #800080;
 }
-.switcher-box.yellow { 
+.switcher-box.yellow {
 	background-color: #FF9C00;
 }
 /* ===== End Stylesheet Switcher (for demo only). Remove if you do not need it. ===== */
