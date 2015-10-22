@@ -1,0 +1,51 @@
+{% macro desenha_tabela(trilha) %}
+    <table border="1">
+        <tr>
+            <th>
+                Dia
+            </th>
+            <th>
+                Data
+            </th>
+            <th>
+                Horário
+            </th>
+            <th>
+                Titulo
+            </th>
+            <th>
+                Autor
+            </th>
+            <th>
+                Resumo
+            </th>
+        </tr>
+    {% for palestra in palestras[trilha] %}
+        <tr>
+            <td>
+                {{ palestra.dia.strftime('%A').decode('utf-8').title() }}
+            </td>
+            <td>
+                {{ palestra.dia.strftime('%x').replace('-','/') }}
+            </td>
+            <td>
+                {{ palestra.hora_inicio.strftime('%X') }} a {{ palestra.hora_fim.strftime('%X') }}
+            </td>
+            <td>
+                {{ palestra.titulo }}
+            </td>
+            <td>
+                {{ palestra.autor }}
+            </td>
+            <td>
+                {{ palestra.resumo }}
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endmacro %}
+
+
+{% for trilha in trilhas %}
+    {{ desenha_tabela(trilha) }}
+{% endfor %}

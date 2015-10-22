@@ -5,7 +5,7 @@ from flask import Blueprint, render_template
 
 from hotsite.models import Palestra
 
-bp = Blueprint('palestras', __name__)
+bp = Blueprint('palestras', __name__, static_folder='static')
 
 
 def init_app(app):
