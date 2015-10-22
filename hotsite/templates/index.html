@@ -1,5 +1,50 @@
 <!DOCTYPE html>
-
+{% macro desenha_tabela(trilha) %}
+    <table class="table" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <th>
+                Dia
+            </th>
+            <th>
+                Data
+            </th>
+            <th>
+                Horário
+            </th>
+            <th>
+                Titulo
+            </th>
+            <th>
+                Autor
+            </th>
+            <th>
+                Resumo
+            </th>
+        </tr>
+    {% for palestra in palestras[trilha] %}
+        <tr>
+            <td>
+                {{ palestra.dia.strftime('%A').decode('utf-8').title() }}
+            </td>
+            <td>
+                {{ palestra.dia.strftime('%x').replace('-','/') }}
+            </td>
+            <td>
+                {{ palestra.hora_inicio.strftime('%H:%Mh') }}
+            </td>
+            <td>
+                {{ palestra.titulo }}
+            </td>
+            <td>
+                {{ palestra.autor }}
+            </td>
+            <td>
+                {{ palestra.resumo }}
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endmacro %}
 <html lang="en">
 	<head>
 
@@ -346,57 +391,7 @@
                                                         </div>
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-text">
-                                                                <table class="table" cellspacing="0" cellpadding="0" border="0">
-                                                                    <tr>
-                                                                        <td>Dia</td>
-                                                                        <td>Data</td>
-                                                                        <td>Horario</td>
-                                                                        <td>Título</td>
-                                                                        <td>Nome do palestrante</td>
-                                                                        <td>Resumo</td>
-                                                                        <td>Sala</td>
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                </table>
+                                                                {{ desenha_tabela('TI') }}
                                                             </div>
 
                                                             <div class="modal-footer">
