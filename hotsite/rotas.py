@@ -1,7 +1,7 @@
 # coding: UTF-8
 from __future__ import absolute_import
 
-from flask import Blueprint, render_template, url_for
+from flask import Blueprint, render_template
 
 from hotsite.models import Palestra
 
@@ -21,5 +21,4 @@ def index():
         palestras_trilha = palestras.setdefault(palestra.trilha, [])
         palestras_trilha.append(palestra)
     trilhas = set(palestra.trilha for palestra in palestras_q)
-    print url_for('palestras.static', filename='ddd')
     return render_template('index.html', palestras=palestras, trilhas=trilhas)
