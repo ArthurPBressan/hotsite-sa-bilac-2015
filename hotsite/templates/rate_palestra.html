@@ -1,0 +1,19 @@
+<h1>{{ palestra.titulo }} - {{ palestra.autor }} </h1>
+Dia {{ palestra.dia.strftime('%A').decode('utf-8').title() }} das {{ palestra.hora_inicio.strftime('%H:%Mh') }} até {{ palestra.hora_fim.strftime('%H:%Mh') }}
+<p>
+    {{ palestra.resumo }}
+</p>
+
+<p>
+    {{ palestra.bio_autor }}
+</p>
+
+<form action="{{ url_for('palestras.rate_palestra', palestra=palestra.id) }}" method="POST">
+    <textarea name="comentario"></textarea>
+    <button type="submit" name="rating" value="-1">
+        Gostei
+    </button>
+    <button type="submit" name="rating" value="1">
+        Não gostei
+    </button>
+</form>

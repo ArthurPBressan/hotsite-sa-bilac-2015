@@ -6,9 +6,6 @@
                 Dia
             </th>
             <th>
-                Data
-            </th>
-            <th>
                 Horário
             </th>
             <th>
@@ -20,14 +17,12 @@
             <th>
                 Resumo
             </th>
+            <th></th>
         </tr>
     {% for palestra in palestras[trilha] %}
         <tr>
             <td>
                 {{ palestra.dia.strftime('%A').decode('utf-8').title() }}
-            </td>
-            <td>
-                {{ palestra.dia.strftime('%x').replace('-','/') }}
             </td>
             <td>
                 {{ palestra.hora_inicio.strftime('%H:%Mh') }}
@@ -40,6 +35,9 @@
             </td>
             <td>
                 {{ palestra.resumo }}
+            </td>
+            <td>
+                <a href="{{ url_for('palestras.rate_palestra', palestra=palestra.id) }}" >Avaliar </a>
             </td>
         </tr>
     {% endfor %}
