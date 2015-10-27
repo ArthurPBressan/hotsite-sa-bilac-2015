@@ -5,7 +5,7 @@ from flask.ext.admin import Admin
 from flask.ext.admin.contrib.sqla import ModelView
 
 from hotsite.base import db
-from hotsite.models import Aluno, Palestra, PalestraAluno
+from hotsite.models import Aluno, Palestra, PalestraAluno, Role
 
 
 class _ModelView(ModelView):
@@ -17,9 +17,14 @@ class _ModelView(ModelView):
         super(_ModelView, self).__init__(self.model, db.session, *args, **kwargs)
 
 
+class RoleView(_ModelView):
+    model = Role
+    name = 'Role'
+
+
 class AlunoView(_ModelView):
 
-    form_excluded_columns =  ['palestras']
+    form_excluded_columns = ['palestras']
 
     model = Aluno
     name = 'Aluno'
@@ -42,8 +47,8 @@ def init_app(app):
         AlunoView(),
         PalestraView(),
         PalestraAlunoView(),
+        RoleView(),
     ]
     admin = Admin(app)
     for view in views:
         admin.add_view(view)
-    pass
