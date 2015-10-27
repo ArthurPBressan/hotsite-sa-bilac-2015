@@ -29,6 +29,11 @@ pip install -r requirements-db.txt
 pip install uwsgi
 
 # Postgres: https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-14-04
+# sudo su - postgres
+# createuser usuario -P
+# createdb database -O usuario
+
 python manage.py db upgrade
 python manage.py ci criar_usuario admin 123456
 
