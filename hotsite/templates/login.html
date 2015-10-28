@@ -1,0 +1,14 @@
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.username.label }}
+        {{ form.username(autocomplete="off", autocorrect="off", autocapitalize="off", spellcheck="false") }}
+    </p>
+    <p>
+        {{ form.password.label }}
+        {{ form.password }}
+    </p>
+    <p>
+        <button type="submit">Enviar</button>
+    </p>
+</form>

@@ -8,7 +8,7 @@ from flask import Flask
 from flask.ext.assets import Environment
 from raven.contrib.flask import Sentry
 
-from hotsite import base, models, admin, rotas
+from hotsite import base, models, admin, rotas, auth
 
 
 def create_app(config=None):
@@ -23,6 +23,7 @@ def create_app(config=None):
     Sentry(app)
 
     base.init_app(app)
+    auth.init_app(app)
     models.init_app(app)
     admin.init_app(app)
     rotas.init_app(app)

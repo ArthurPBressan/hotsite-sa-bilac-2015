@@ -1,50 +1,51 @@
 # coding: UTF-8
 from __future__ import absolute_import
 
-from flask.ext.security import SQLAlchemyUserDatastore, UserMixin, RoleMixin
+from flask.ext.login import make_secure_token, UserMixin
 
 from sqlalchemy import Column, ForeignKey
-from sqlalchemy.orm import relationship, backref
-from sqlalchemy.types import Integer, String, Date, Text, Time, Boolean
+from sqlalchemy.orm import relationship
+from sqlalchemy.types import Integer, String, Date, Text, Time
 
-from hotsite.base import db, security
+from hotsite.base import db
 
 
 def init_app(app):
-    user_datastore = SQLAlchemyUserDatastore(db, Aluno, Role)
-    security.init_app(app, user_datastore)
-
-
-roles_alunos = db.Table(
-    'roles_alunos',
-    Column('aluno_id', Integer(), ForeignKey('aluno.id')),
-    Column('role_id', Integer(), ForeignKey('role.id'))
-)
-
-
-class Role(db.Model, RoleMixin):
-    id = Column(Integer(), primary_key=True)
-    name = Column(String(80), unique=True)
-    description = Column(String(255))
-
-    def __repr__(self):
-        return self.name
+    pass
 
 
 class Aluno(db.Model, UserMixin):
     id = Column(Integer, primary_key=True)
-    email = Column(String(255))
     ra = Column(String(255))
     nome = Column(String(255))
     password = Column(String(255))
-    roles = relationship('Role', secondary=roles_alunos,
-                         backref=backref('alunos', lazy='dynamic'))
-    active = Column(Boolean(), default=True)
-
     palestras = relationship('PalestraAluno', backref='aluno')
 
+    @db.validates('password')
+    def tokenize_password(self, key, value):
+        return make_secure_token(value)
+
+    @classmethod
+    def check_auth(cls, ra, password):
+        if not password:
+            return None
+        password = make_secure_token(password)
+        return cls.query.filter_by(ra=ra, password=password).first()
+
+    def get_id(self):
+        return self.ra
+
+    def is_anonymous(self):
+        return False
+
+    def is_authenticated(self):
+        return True
+
+    def is_active(self):
+        return True
+
     def __repr__(self):
-        return '{} ({})'.format(self.email, ', '.join([role.name for role in self.roles]))
+        return '{}-{}'.format(self.nome, self.ra)
 
 
 class Palestra(db.Model):

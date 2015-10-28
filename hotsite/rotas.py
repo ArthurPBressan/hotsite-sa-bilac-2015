@@ -2,7 +2,7 @@
 from __future__ import absolute_import
 
 from flask import Blueprint, render_template, request, redirect, url_for
-from flask.ext.security import login_required, current_user
+from flask.ext.login import login_required, current_user
 
 from hotsite.models import Palestra, PalestraAluno
 from hotsite.base import db
