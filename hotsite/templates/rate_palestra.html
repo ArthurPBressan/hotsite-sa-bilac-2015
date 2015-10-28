@@ -10,10 +10,10 @@ Dia {{ palestra.dia.strftime('%A').decode('utf-8').title() }} das {{ palestra.ho
 
 <form action="{{ url_for('palestras.rate_palestra', palestra=palestra.id) }}" method="POST">
     <textarea name="comentario"></textarea>
-    <button type="submit" name="rating" value="-1">
+    <button type="submit" name="rating" value="1">
         Gostei
     </button>
-    <button type="submit" name="rating" value="1">
+    <button type="submit" name="rating" value="-1">
         Não gostei
     </button>
 </form>

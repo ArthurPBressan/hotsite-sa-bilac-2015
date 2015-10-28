@@ -2,6 +2,7 @@
 from __future__ import absolute_import
 
 from flask import Blueprint, render_template, request, redirect, url_for
+from flask.ext.security import login_required, current_user
 
 from hotsite.models import Palestra, PalestraAluno
 from hotsite.base import db
@@ -26,13 +27,15 @@ def index():
 
 
 @bp.route('/<palestra>', methods=['GET', 'POST'])
+@login_required
 def rate_palestra(palestra):
     palestra = Palestra.query.get_or_404(palestra)
     if request.method == 'POST':
         comentario = request.form['comentario']
         rating = int(request.form['rating'])
         palestra_aluno = PalestraAluno(palestra_id=palestra.id, rating=rating,
-                                       comentario=comentario)
+                                       comentario=comentario,
+                                       aluno_id=current_user.id)
         db.session.add(palestra_aluno)
         db.session.commit()
         return redirect(url_for('.index'))
