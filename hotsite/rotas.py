@@ -3,7 +3,8 @@ from __future__ import absolute_import
 
 from flask import Blueprint, render_template, request, redirect, url_for
 
-from hotsite.models import Palestra
+from hotsite.models import Palestra, PalestraAluno
+from hotsite.base import db
 
 bp = Blueprint('palestras', __name__, static_folder='static')
 
@@ -28,6 +29,11 @@ def index():
 def rate_palestra(palestra):
     palestra = Palestra.query.get_or_404(palestra)
     if request.method == 'POST':
-        print request.form
+        comentario = request.form['comentario']
+        rating = int(request.form['rating'])
+        palestra_aluno = PalestraAluno(palestra_id=palestra.id, rating=rating,
+                                       comentario=comentario)
+        db.session.add(palestra_aluno)
+        db.session.commit()
         return redirect(url_for('.index'))
     return render_template('rate_palestra.html', palestra=palestra)

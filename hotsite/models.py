@@ -60,7 +60,7 @@ class Palestra(db.Model):
     hora_inicio = Column(Time)
     hora_fim = Column(Time)
 
-    alunos = relationship('PalestraAluno', backref='palestras')
+    alunos = relationship('PalestraAluno', backref='palestra')
 
 
 class PalestraAluno(db.Model):
