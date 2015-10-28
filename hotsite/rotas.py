@@ -26,6 +26,11 @@ def index():
     return render_template('index.html', palestras=palestras, trilhas=trilhas)
 
 
+@bp.route('/favicon.ico')
+def favicon():
+    return redirect(url_for('.static', filename='img/favicon.ico'))
+
+
 @bp.route('/<palestra>', methods=['GET', 'POST'])
 @login_required
 def rate_palestra(palestra):
