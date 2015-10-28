@@ -1,3 +1,22 @@
+{% macro messages() %}
+  {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        {% if category %}
+        <div class="alert alert-{{ category }}">
+        {% else %}
+        <div class="alert">
+        {% endif %}
+          <a href="javascript:void(0)" class="close" data-dismiss="alert">x</a>
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+{% endmacro %}
+
+{{ messages() }}
+
 <form method="POST">
     {{ form.hidden_tag() }}
     <p>

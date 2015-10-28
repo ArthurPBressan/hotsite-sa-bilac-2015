@@ -3,7 +3,7 @@ from __future__ import absolute_import
 
 from flask import Blueprint, redirect, url_for, request, render_template, flash
 from flask.ext.wtf import Form
-from flask.ext.login import LoginManager, login_user
+from flask.ext.login import LoginManager, login_user, current_user, logout_user
 from wtforms import PasswordField, TextField, validators
 
 from hotsite.models import Aluno
@@ -13,6 +13,7 @@ bp = Blueprint('auth', __name__)
 
 login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
+login_manager.login_message = 'Por favor, entre com o seu RA e senha do portal'
 
 
 @login_manager.user_loader
@@ -23,6 +24,8 @@ def load_user(user_id):
 
 @bp.route("/login/", methods=["GET", "POST"])
 def login():
+    if not current_user.is_anonymous:
+        return redirect(request.args.get('next') or url_for("palestras.index"))
     form = LoginForm()
     if form.validate_on_submit():
         user = form.user
@@ -31,6 +34,13 @@ def login():
     elif request.method == 'POST':
         flash(u'Usuário ou senha inválidos.', 'error')
     return render_template("login.html", form=form)
+
+
+@bp.route("/logout/")
+def logout():
+    logout_user()
+    response = redirect(request.args.get('next') or url_for('palestras.index'))
+    return response
 
 
 def criar_admin():
