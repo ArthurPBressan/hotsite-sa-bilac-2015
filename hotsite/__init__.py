@@ -19,6 +19,10 @@ def create_app(config=None):
     if config:
         app.config.update(config)
 
+    @app.route('/')
+    def index():
+        return rotas.index()
+
     Environment(app)
     Sentry(app)
 
