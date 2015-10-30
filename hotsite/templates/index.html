@@ -44,246 +44,174 @@
     </table>
 {% endmacro %}
 <html lang="en">
-	<head>
-
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Semana Acadêmica - BILAC Faculdades</title>
-		<meta name="description" content="Bootstrap HTML5 Template">
-		<meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template" />
-		<meta name="author" content="themetorium.net">
-
-		<!-- Mobile Metas -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<!-- Google Fonts  -->
-		<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'> <!-- Body font -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'> <!-- Navbar font -->
-		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> <!-- h1, h2, h3, h4, h5, h6 font -->
-
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Semana Acadêmica - BILAC Faculdades</title>
+        <meta name="description" content="Bootstrap HTML5 Template">
+        <meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template" />
+        <meta name="author" content="themetorium.net">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="{{ url_for('palestras.static', filename='img/favicon.ico')}}" type="image/x-icon">
         <link rel="icon" href="{{ url_for('palestras.static', filename='img/favicon.ico')}}" type="image/x-icon">
-
-		<!-- Libs and Plugins CSS -->
-		<link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
-		<link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/animations/css/animate.min.css') }}">
-		<link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/font-awesome/font-awesome.min.css') }}"> <!-- Font Icons -->
-		<link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/owl-carousel/css/owl.carousel.css') }}">
-		<link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/owl-carousel/css/owl.theme.css') }}">
-
+        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/animations/css/animate.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/font-awesome/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/owl-carousel/css/owl.carousel.css') }}">
+        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/owl-carousel/css/owl.theme.css') }}">
         <link rel="Stylesheet" type="text/css" href="{{ url_for('palestras.static', filename='vendor/countdown/style/main.css') }}">
-
-		<!-- Theme CSS -->
-		<link rel="stylesheet" href="{{ url_for('palestras.static', filename='css/theme.css') }}">
-		<link rel="stylesheet" href="{{ url_for('palestras.static', filename='css/mobile.css') }}">
-
-		<!-- Theme custom CSS (all your CSS customizations) -->
-		<link rel="stylesheet" href="{{ url_for('palestras.static', filename='css/custom.css') }}">
-	</head>
-
-	<body data-spy="scroll" data-target="#main-navbar"> <!-- Add class="boxed" to boxed layout -->
-		<div class="page-loader"></div>  <!-- Display loading image while page loads -->
-		<div class="body">
-
-			<div id="body-container">
-
-
-				<header id="header" class="header-main">
-
-					<!-- Begin Navbar -->
-					<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top navbar-transparent" role="navigation"> <!-- Classes: navbar-default, navbar-inverse, navbar-fixed-top, navbar-fixed-bottom, navbar-transparent. Note: If you use non-transparent navbar, set "height: 98px;" to #header -->
-
-						<!-- Begin Top sliding bar -->
-						<section>
-							<div id="top-slidingbar-wrapper">
-								<div id="top-slidingbar">
-									<div class="container">
-										<div class="row">
-											<div class="col-md-12">
-												<h3>Semana Acadêmica</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-												tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-												quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-												consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-												cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-												proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="top-slidingbar-trigger-wrapper"><span class="top-slidingbar-trigger">+</span></div>
-							</div>
-						</section>
-						<!-- End Top sliding bar -->
-
-					  <div class="container">
-
-					    <!-- Brand and toggle get grouped for better mobile display -->
-					    <div class="navbar-header">
-					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					        <span class="sr-only">Toggle navigation</span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					      </button>
-					      <a class="navbar-brand page-scroll" href="index.html">Bilac</a>
-					    </div>
-
-					    <!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav navbar-right">
-								<li class="active"><a class="page-scroll" href="#body-container">Home</a></li>
-								<li class="active"><a class="page-scroll" href="#sobre">Sobre</a></li>
-
-								<li><a class="page-scroll" href="#cursos">Cursos</a></li>
-								<li><a class="page-scroll" href="#contact-section">Contato</a></li>
-
-							</ul>
-						</div><!-- /.navbar-collapse -->
-					  </div><!-- /.container -->
-					</nav>
-					<!-- End Navbar -->
-
-				</header>
-				<!--==================
-				///// END HEADER /////
-				======================-->
-
-
-				<!-- Begin text carousel intro section -->
-				<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url({{ url_for('palestras.static', filename='img/bg-index3.jpg') }}); opacity: 1.0">
-
-					<!-- Begin cover -->
-					<div class="cover"><div class="cover-inner"></div></div>
-					<!-- End cover -->
-
-					<div class="container">
-						<div class="caption text-center text-white" data-stellar-ratio="0.7">
-
-							<div id="owl-intro-text" class="owl-carousel">
-								<div class="item">
-									<h1>Semana Acadêmica  Bilac</h1>
-									<h3><strong>Conheça quem ja alcançou seus objetivos</strong></h3>
-									<div class="more-space-m"></div>
-
-								</div>
-								<div class="item">
-									<h1 >Expanda seu profissional</h1>
-									<h3><strong>Veja as visões do mercado que mais crescem</strong></h3>
-									<div class="more-space-m"></div>
-
-								</div>
-								<div class="item">
-									<h1>Na faculdade onde se desenvolve o futuro</h1>
-									<h3><strong>Aprenda com alunos que conquistaram seus objetivos</strong></h3>
-									<div class="more-space-m"></div>
-
-								</div>
-							</div>
-
-						</div> <!-- /.caption -->
-					</div> <!-- /.container -->
-
-				</section>
-				<!-- End text carousel intro section -->
-
-
-				<!-- Begin about section -->
-				<section id="sobre" class="page">
-
-					<!-- Begin page header-->
-					<div class="page-header-wrapper">
-						<div class="container">
-							<div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
-								<h1>Sobre a <span class="text-main">Semana Acadêmica</span></h1>
-								<div class="divider divider-icon divider-md">//</div>
-								<p class="lead text-gray">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation.
-								</p>
-							</div>
-						</div>
-					</div>
-					<!-- End page header-->
-
-					<!-- Begin info box-1 -->
-					<div class="info-box-1-wrapper">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-3 col-sm-6">
-									<a href="#cursos" class="info-box-1 square-icon text-center wow zoomIn page-scroll" data-wow-delay="0">
-										<span class="info-box-icon"><i class="fa fa-rocket"></i></span>
-										<div class="info-box-info">
-											<h4>Marketing</h4>
-											<div class="divider divider-sm"></div>
-											<p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
-										</div>
-									</a>
-								</div>
-
-								<div class="col-md-3 col-sm-6">
-									<a href="#cursos" class="info-box-1 square-icon text-center wow zoomIn page-scroll" data-wow-delay="0.2s">
-										<span class="info-box-icon"><i class="fa fa-html5"></i></span>
-										<div class="info-box-info">
-											<h4>Tecnologia</h4>
-											<div class="divider divider-sm"></div>
-											<p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
-										</div>
-									</a>
-								</div>
-
-								<div class="col-md-3 col-sm-6">
-									<a href="#cursos" class="info-box-1 square-icon text-center wow zoomIn page-scroll" data-wow-delay="0.4s">
-										<span class="info-box-icon"><i class="fa fa-users"></i></span>
-										<div class="info-box-info">
-											<h4>Humanas</h4>
-											<div class="divider divider-sm"></div>
-											<p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
-										</div>
-									</a>
-								</div>
-
-								<div class="col-md-3 col-sm-6">
-									<a href="#cursos" class="info-box-1 square-icon text-center wow zoomIn page-scroll" data-wow-delay="0.6s">
-										<span class="info-box-icon"><i class="fa fa-university"></i></span>
-										<div class="info-box-info">
-											<h4>Pedagogia</h4>
-											<div class="divider divider-sm"></div>
-											<p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
-										</div>
-									</a>
-								</div>
-							</div> <!-- /.row -->
-						</div> <!-- /.container -->
-					</div>
-					<!-- End info box-1 -->
-
-					<div class="more-space-l"></div>
-
-					<!-- Begin featured box -->
-
-					<!-- End featured box -->
-
-					<!-- Begin trusted by -->
-
-
-					<!-- Begin counter up -->
-					<div id="counter-up-trigger" class="counter-up parallax" data-stellar-background-ratio="0.5" style="background-image: url({{ url_for('palestras.static', filename='img/bg-count.jpg') }});">
-						<div class="cover"></div>
-						<div class="container">
-
-							<div class="heading text-center text-white">
-								<h1>Esta chegando <span class="text-main">se prepare</span></h1>
-								<div class="divider divider-icon divider-md divider-white">//</div>
-								<div class="more-space-l"></div>
+        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='css/theme.css') }}">
+        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='css/mobile.css') }}">
+        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='css/custom.css') }}">
+    </head>
+    <body data-spy="scroll" data-target="#main-navbar">
+        <div class="page-loader"></div>
+        <div class="body">
+            <div id="body-container">
+                <header id="header" class="header-main">
+                    <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top navbar-transparent" role="navigation">
+                        <section>
+                            <div id="top-slidingbar-wrapper">
+                                <div id="top-slidingbar">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h3>Semana Acadêmica</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top-slidingbar-trigger-wrapper"><span class="top-slidingbar-trigger">+</span></div>
+                            </div>
+                        </section>
+                      <div class="container">
+                        <div class="navbar-header">
+                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                          <a class="navbar-brand page-scroll" href="index.html">Bilac</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a class="page-scroll" href="#body-container">Home</a></li>
+                                <li class="active"><a class="page-scroll" href="#sobre">Sobre</a></li>
+                                <li><a class="page-scroll" href="#cursos">Cursos</a></li>
+                                <li><a class="page-scroll" href="#contact-section">Contato</a></li>
+                            </ul>
+                        </div>
+                      </div>
+                    </nav>
+                </header>
+                <section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url({{ url_for('palestras.static', filename='img/bg-index3.jpg') }}); opacity: 1.0">
+                    <div class="cover"><div class="cover-inner"></div></div>
+                    <div class="container">
+                        <div class="caption text-center text-white" data-stellar-ratio="0.7">
+                            <div id="owl-intro-text" class="owl-carousel">
+                                <div class="item">
+                                    <h1>Semana Acadêmica  Bilac</h1>
+                                    <h3><strong>Conheça quem ja alcançou seus objetivos</strong></h3>
+                                    <div class="more-space-m"ng-app="string"></div>
+                                </div>
+                                <div class="item">
+                                    <h1 >Expanda seu profissional</h1>
+                                    <h3><strong>Veja as visões do mercado que mais crescem</strong></h3>
+                                    <div class="more-space-m"></div>
+                                </div>
+                                <div class="item">
+                                    <h1>Na faculdade onde se desenvolve o futuro</h1>
+                                    <h3><strong>Aprenda com alunos que conquistaram seus objetivos</strong></h3>
+                                    <div class="more-space-m"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="sobre" class="page">
+                    <div class="page-header-wrapper">
+                        <div class="container">
+                            <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                                <h1>Sobre a <span class="text-main">Semana Acadêmica</span></h1>
+                                <div class="divider divider-icon divider-md">//</div>
+                                <p class="lead text-gray">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-box-1-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <a href="#cursos" class="info-box-1 square-icon text-center wow zoomIn page-scroll" data-wow-delay="0">
+                                        <span class="info-box-icon"><i class="fa fa-rocket"></i></span>
+                                        <div class="info-box-info">
+                                            <h4>Marketing</h4>
+                                            <div class="divider divider-sm"></div>
+                                            <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <a href="#cursos" class="info-box-1 square-icon text-center wow zoomIn page-scroll" data-wow-delay="0.2s">
+                                        <span class="info-box-icon"><i class="fa fa-html5"></i></span>
+                                        <div class="info-box-info">
+                                            <h4>Tecnologia</h4>
+                                            <div class="divider divider-sm"></div>
+                                            <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <a href="#cursos" class="info-box-1 square-icon text-center wow zoomIn page-scroll" data-wow-delay="0.4s">
+                                        <span class="info-box-icon"><i class="fa fa-users"></i></span>
+                                        <div class="info-box-info">
+                                            <h4>Humanas</h4>
+                                            <div class="divider divider-sm"></div>
+                                            <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <a href="#cursos" class="info-box-1 square-icon text-center wow zoomIn page-scroll" data-wow-delay="0.6s">
+                                        <span class="info-box-icon"><i class="fa fa-university"></i></span>
+                                        <div class="info-box-info">
+                                            <h4>Pedagogia</h4>
+                                            <div class="divider divider-sm"></div>
+                                            <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-space-l"></div>
+                    <div id="counter-up-trigger" class="counter-up parallax" data-stellar-background-ratio="0.5" style="background-image: url({{ url_for('palestras.static', filename='img/bg-count.jpg') }});">
+                        <div class="cover"></div>
+                        <div class="container">
+                            <div class="heading text-center text-white">
+                                <h1>Esta chegando <span class="text-main">se prepare</span></h1>
+                                <div class="divider divider-icon divider-md divider-white">//</div>
+                                <div class="more-space-l"></div>
                                 <p class="lead text-gray">
                                     O evento ocorrerá entre os dias 10 a 13 de novembro na faculdade Bilac
                                     R. Francisco Paes, 84, Centro.
                                 </p>
-							</div>
-
-							<div class="row">
+                            </div>
+                            <div class="row">
                                 <div class="col-md-2 col-sm-6">..</div>
                                 <div class="col-md-9  col-sm-6">
                                 <div id="countdown_dashboard">
@@ -292,356 +220,273 @@
                                         <div class="digit">0</div>
                                         <div class="digit">0</div>
                                     </div>
-
                                     <div class="dash days_dash">
                                         <span class="dash_title">Dias</span>
                                         <div class="digit">0</div>
                                         <div class="digit">0</div>
                                     </div>
-
                                     <div class="dash hours_dash">
                                         <span class="dash_title">Horas</span>
                                         <div class="digit">0</div>
                                         <div class="digit">0</div>
                                     </div>
-
                                     <div class="dash minutes_dash">
                                         <span class="dash_title">Minutos</span>
                                         <div class="digit">0</div>
                                         <div class="digit">0</div>
                                     </div>
-
                                     <div class="dash seconds_dash">
                                         <span class="dash_title">seconds</span>
                                         <div class="digit">0</div>
                                         <div class="digit">0</div>
                                     </div>
-
                                 </div>
                                 </div>
-							</div>
-						</div>
-					</div>
-
-				</section>
-
-				<section id="cursos" class="page">
-
-					<!-- Begin page header-->
-					<div class="page-header-wrapper">
-						<div class="container">
-							<div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
-								<h1>Veja aqui a <span class="text-main">Programação</span></h1>
-								<div class="divider divider-md divider-icon">//</div>
-								<p class="lead text-gray">
-									Os cursos da faculdade bilac estão oferendo diversas palestras
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="cursos" class="page">
+                    <div class="page-header-wrapper">
+                        <div class="container">
+                            <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                                <h1>Veja aqui a <span class="text-main">Programação</span></h1>
+                                <div class="divider divider-md divider-icon">//</div>
+                                <p class="lead text-gray">
+                                    Os cursos da faculdade bilac estão oferendo diversas palestras
                                     e mini-cursos para ajudar em sua capacitação.
-								</p>
-							</div>
-						</div>
-					</div>
-					<!-- End page header-->
-
-					<!-- Begin portfolio -->
-					<div class="portfolio">
-						<div class="container-fluid">
-							<div class="row">
-
-								<!-- Portfolio item-1 -->
-								<div class="portfolio-item col-sm-6 col-md-6 col-lg-3 wow flipInX" data-wow-delay="0.2s">
-									<a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-1">
-										<img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-1.png') }}" alt="...">
-										<div class="cover"></div>
-										<div class="caption">
-				                            <div class="caption-content text-center">
-				                                <h2>Administração de Empresas</h2>
-				                                <div class="divider divider-sm"></div>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-				                            </div>
-				                        </div>
-				                    </a>
-								</div>
-
-								<!-- Begin portfolio modal-1 (Carousel Portfolio) -->
-								<div class="modal fade" id="portfolioModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-5" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content text-white">
-											<div class="close" data-dismiss="modal">
-								                <div class="lr"><div class="rl"></div></div>
-								            </div>
-											<div class="container">
-												<div class="modal-body">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="portfolio-item col-sm-6 col-md-6 col-lg-3 wow flipInX" data-wow-delay="0.2s">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-1">
+                                        <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-1.png') }}" alt="...">
+                                        <div class="cover"></div>
+                                        <div class="caption">
+                                            <div class="caption-content text-center">
+                                                <h2>Administração de Empresas</h2>
+                                                <div class="divider divider-sm"></div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="portfolioModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-5" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content text-white">
+                                            <div class="close" data-dismiss="modal">
+                                                <div class="lr"><div class="rl"></div></div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="modal-body">
                                                     <div class="row">
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-header">
-                                                                <h2 class="modal-title" id="myModalLabel-7">Cursos de Tecnologia</h2>
+                                                                <h2 class="modal-title" id="myModalLabel-7">Administração de Empresas</h2>
                                                                 <div class="divider divider-sm divider-icon divider-white">//</div>
                                                             </div>
                                                             <div class="modal-image">
-                                                                <div class="owl-carousel owl-portfolio-modal">
-                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-5.png') }}" alt="...">
+                                                                <div class="owl-portfolio-modal">
+                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-1.png') }}" alt="...">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-text">
-                                                                {{ desenha_tabela('TI') }}
+                                                                {{ desenha_tabela('adm') }}
                                                             </div>
-
                                                             <div class="modal-footer">
-                                                                <p>Copyright ©2015</p>
+                                                                <p></p>
                                                             </div>
                                                             <button type="button" class="btn btn-main" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                                                         </div>
                                                     </div>
-						                            <div class="modal-footer">
-														<p>Copyright ©2015</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- End portfolio modal-1 -->
-
-								<!-- Portfolio item-2 -->
-								<div class="portfolio-item col-sm-6 col-md-6 col-lg-3 wow flipInX" data-wow-delay="0.3s">
-									<a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-2">
-										<img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-2.png') }}" alt="...">
-										<div class="cover"></div>
-										<div class="caption">
-				                            <div class="caption-content text-center">
-				                                <h2>Logistica</h2>
-				                                <div class="divider divider-sm"></div>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-				                            </div>
-				                        </div>
-				                    </a>
-								</div>
-
-								<!-- Begin portfolio modal-2 (Vimeo Portfolio) -->
-								<div class="modal fade" id="portfolioModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-6" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content text-white">
-											<div class="close" data-dismiss="modal">
-								                <div class="lr"><div class="rl"></div></div>
-								            </div>
-											<div class="container">
-												<div class="modal-body">
+                                                    <div class="modal-footer">
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item col-sm-6 col-md-6 col-lg-3 wow flipInX" data-wow-delay="0.3s">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-2">
+                                        <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-2.png') }}" alt="...">
+                                        <div class="cover"></div>
+                                        <div class="caption">
+                                            <div class="caption-content text-center">
+                                                <h2>Logística</h2>
+                                                <div class="divider divider-sm"></div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="portfolioModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-6" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content text-white">
+                                            <div class="close" data-dismiss="modal">
+                                                <div class="lr"><div class="rl"></div></div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="modal-body">
                                                     <div class="row">
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-header">
-                                                                <h2 class="modal-title" id="myModalLabel-8">Cursos de Tecnologia</h2>
+                                                                <h2 class="modal-title" id="myModalLabel-8">Logística</h2>
                                                                 <div class="divider divider-sm divider-icon divider-white">//</div>
                                                             </div>
                                                             <div class="modal-image">
-                                                                <div class="owl-carousel owl-portfolio-modal">
-                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-5.png') }}" alt="...">
+                                                                <div class="owl-portfolio-modal">
+                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-2.png') }}" alt="...">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-text">
-                                                                <table class="table" cellspacing="0" cellpadding="0" border="0">
-                                                                    <tr>
-                                                                        <td>Dia</td>
-                                                                        <td>Data</td>
-                                                                        <td>Horario</td>
-                                                                        <td>Título</td>
-                                                                        <td>Nome do palestrante</td>
-                                                                        <td>Resumo</td>
-                                                                        <td>Sala</td>
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                </table>
+                                                                {{ desenha_tabela('logistica') }}
                                                             </div>
-
                                                             <div class="modal-footer">
-                                                                <p>Copyright ©2015</p>
+                                                                <p></p>
                                                             </div>
                                                             <button type="button" class="btn btn-main" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                                                         </div>
                                                     </div>
-						                            <div class="modal-footer">
-														<p>Copyright ©2015</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- End portfolio modal-2 -->
-
-								<!-- Portfolio item-3 -->
-								<div class="portfolio-item col-sm-6 col-md-4 col-lg-3 wow flipInX" data-wow-delay="0.4s">
-									<a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-3">
-										<img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-3.jpg') }}" alt="...">
-										<div class="cover"></div>
-										<div class="caption">
-				                            <div class="caption-content text-center">
-				                                <h2>Marketing</h2>
-				                                <div class="divider divider-sm"></div>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-				                            </div>
-				                        </div>
-				                    </a>
-								</div>
-
-								<!-- Begin portfolio modal-3 (Single Image Portfolio) -->
-								<div class="modal fade" id="portfolioModal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-7" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content text-white">
-											<div class="close" data-dismiss="modal">
-								                <div class="lr"><div class="rl"></div></div>
-								            </div>
-											<div class="container">
-												<div class="modal-body">
+                                                    <div class="modal-footer">
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item col-sm-6 col-md-4 col-lg-3 wow flipInX" data-wow-delay="0.4s">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-3">
+                                        <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-3.png') }}" alt="...">
+                                        <div class="cover"></div>
+                                        <div class="caption">
+                                            <div class="caption-content text-center">
+                                                <h2>Marketing</h2>
+                                                <div class="divider divider-sm"></div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="portfolioModal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-7" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content text-white">
+                                            <div class="close" data-dismiss="modal">
+                                                <div class="lr"><div class="rl"></div></div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="modal-body">
                                                     <div class="row">
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-header">
-                                                                <h2 class="modal-title" id="myModalLabel-9">Cursos de Tecnologia</h2>
+                                                                <h2 class="modal-title" id="myModalLabel-9">Marketing</h2>
                                                                 <div class="divider divider-sm divider-icon divider-white">//</div>
                                                             </div>
                                                             <div class="modal-image">
-                                                                <div class="owl-carousel owl-portfolio-modal">
-                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-5.png') }}" alt="...">
+                                                                <div class="owl-portfolio-modal">
+                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-3.png') }}" alt="...">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-text">
-                                                                <table class="table" cellspacing="0" cellpadding="0" border="0">
-                                                                    <tr>
-                                                                        <td>Dia</td>
-                                                                        <td>Data</td>
-                                                                        <td>Horario</td>
-                                                                        <td>Título</td>
-                                                                        <td>Nome do palestrante</td>
-                                                                        <td>Resumo</td>
-                                                                        <td>Sala</td>
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                </table>
+                                                                {{ desenha_tabela('marketing') }}
                                                             </div>
-
                                                             <div class="modal-footer">
-                                                                <p>Copyright ©2015</p>
+                                                                <p></p>
                                                             </div>
                                                             <button type="button" class="btn btn-main" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                                                         </div>
                                                     </div>
-						                            <div class="modal-footer">
-														<p>Copyright ©2015</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- End portfolio modal-3 -->
-
-								<!-- Portfolio item-4 -->
-								<div class="portfolio-item col-sm-6 col-md-4 col-lg-3 wow flipInX" data-wow-delay="0.5s">
-									<a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-4">
-										<img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-4.jpg') }}" alt="...">
-										<div class="cover"></div>
-										<div class="caption">
-				                            <div class="caption-content text-center">
-				                                <h2>Pedagogia</h2>
-				                                <div class="divider divider-sm"></div>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-				                            </div>
-				                        </div>
-				                    </a>
-								</div>
-
-								<!-- Begin portfolio modal-4 (Youtube Portfolio) -->
-								<div class="modal fade" id="portfolioModal-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-8" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content text-white">
-											<div class="close" data-dismiss="modal">
-								                <div class="lr"><div class="rl"></div></div>
-								            </div>
-											<div class="container">
-												<div class="modal-body">
+                                                    <div class="modal-footer">
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item col-sm-6 col-md-4 col-lg-3 wow flipInX" data-wow-delay="0.5s">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-4">
+                                        <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-4.png') }}" alt="...">
+                                        <div class="cover"></div>
+                                        <div class="caption">
+                                            <div class="caption-content text-center">
+                                                <h2>Pedagogia</h2>
+                                                <div class="divider divider-sm"></div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="portfolioModal-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-8" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content text-white">
+                                            <div class="close" data-dismiss="modal">
+                                                <div class="lr"><div class="rl"></div></div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-8 col-md-offset-2">
+                                                            <div class="modal-header">
+                                                                <h2 class="modal-title" id="myModalLabel-9">Pedagogia</h2>
+                                                                <div class="divider divider-sm divider-icon divider-white">//</div>
+                                                            </div>
+                                                            <div class="modal-image">
+                                                                <div class="owl-portfolio-modal">
+                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-4.png') }}" alt="...">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8 col-md-offset-2">
+                                                            <div class="modal-text">
+                                                                {{ desenha_tabela('pedagogia') }}
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <p></p>
+                                                            </div>
+                                                            <button type="button" class="btn btn-main" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item col-sm-6 col-md-4 col-lg-3 wow flipInX" data-wow-delay="0.6s">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-5">
+                                        <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-5.png') }}" alt="...">
+                                        <div class="cover"></div>
+                                        <div class="caption">
+                                            <div class="caption-content text-center">
+                                                <h2>Cursos de Tecnologia</h2>
+                                                <div class="divider divider-sm"></div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="portfolioModal-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-9" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content text-white">
+                                            <div class="close" data-dismiss="modal">
+                                                <div class="lr"><div class="rl"></div></div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="modal-body text-center">
                                                     <div class="row">
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-header">
@@ -649,534 +494,190 @@
                                                                 <div class="divider divider-sm divider-icon divider-white">//</div>
                                                             </div>
                                                             <div class="modal-image">
-                                                                <div class="owl-carousel owl-portfolio-modal">
+                                                                <div class="owl-portfolio-modal">
                                                                     <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-5.png') }}" alt="...">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-text">
-                                                                <table class="table" cellspacing="0" cellpadding="0" border="0">
-                                                                    <tr>
-                                                                        <td>Dia</td>
-                                                                        <td>Data</td>
-                                                                        <td>Horario</td>
-                                                                        <td>Título</td>
-                                                                        <td>Nome do palestrante</td>
-                                                                        <td>Resumo</td>
-                                                                        <td>Sala</td>
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                </table>
+                                                                <p>Palestras</p>
+                                                                {{ desenha_tabela('ti') }}
+                                                                <p>Mini-Cursos</p>
+                                                                {{ desenha_tabela('ti-cursos') }}
                                                             </div>
-
                                                             <div class="modal-footer">
-                                                                <p>Copyright ©2015</p>
+                                                                <p></p>
                                                             </div>
                                                             <button type="button" class="btn btn-main" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                                                         </div>
                                                     </div>
-												</div>
-												<div class="modal-footer">
-													<p>Copyright ©2015</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- End portfolio modal-4 -->
-
-								<!-- Portfolio item-5 -->
-								<div class="portfolio-item col-sm-6 col-md-4 col-lg-3 wow flipInX" data-wow-delay="0.6s">
-									<a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-5">
-										<img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-5.png') }}" alt="...">
-										<div class="cover"></div>
-										<div class="caption">
-				                            <div class="caption-content text-center">
-				                                <h2>Cursos de Tecnologia</h2>
-				                                <div class="divider divider-sm"></div>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-				                            </div>
-				                        </div>
-				                    </a>
-								</div>
-
-								<!-- Begin portfolio modal-5 (One Column Portfolio) -->
-								<div class="modal fade" id="portfolioModal-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-9" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content text-white">
-											<div class="close" data-dismiss="modal">
-								                <div class="lr"><div class="rl"></div></div>
-								            </div>
-											<div class="container">
-												<div class="modal-body text-center">
-													<div class="row">
-														<div class="col-md-8 col-md-offset-2">
-															<div class="modal-header">
-																<h2 class="modal-title" id="myModalLabel-9">Cursos de Tecnologia</h2>
-																<div class="divider divider-sm divider-icon divider-white">//</div>
-															</div>
-															<div class="modal-image">
-																<div class="owl-carousel owl-portfolio-modal">
-																	<img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-5.png') }}" alt="...">
-																</div>
-															</div>
-														</div>
-														<div class="col-md-8 col-md-offset-2">
-															<div class="modal-text">
-																<table class="table" cellspacing="0" cellpadding="0" border="0">
-                                                                    <tr>
-                                                                        <td>Dia</td>
-                                                                        <td>Data</td>
-                                                                        <td>Horario</td>
-                                                                        <td>Título</td>
-                                                                        <td>Nome do palestrante</td>
-                                                                        <td>Resumo</td>
-                                                                        <td>Sala</td>
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                </table>
-															</div>
-
-								                            <div class="modal-footer">
-																<p>Copyright ©2015</p>
-															</div>
-															<button type="button" class="btn btn-main" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-							                            </div>
-						                            </div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- End portfolio modal-5 -->
-
-								<!-- Portfolio item-6 -->
-								<div class="portfolio-item col-sm-6 col-md-4 col-lg-3 wow flipInX" data-wow-delay="0.7s">
-									<a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-6">
-										<img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-6.png') }}" alt="...">
-										<div class="cover"></div>
-										<div class="caption">
-				                            <div class="caption-content text-center">
-				                                <h2>Recursos Humanos</h2>
-				                                <div class="divider divider-sm"></div>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-				                            </div>
-				                        </div>
-				                    </a>
-								</div>
-
-								<!-- Begin portfolio modal-6 (Carousel Portfolio) -->
-								<div class="modal fade" id="portfolioModal-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-10" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content text-white">
-											<div class="close" data-dismiss="modal">
-								                <div class="lr"><div class="rl"></div></div>
-								            </div>
-											<div class="container">
-												<div class="modal-body">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item col-sm-6 col-md-4 col-lg-3 wow flipInX" data-wow-delay="0.7s">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-6">
+                                        <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-6.png') }}" alt="...">
+                                        <div class="cover"></div>
+                                        <div class="caption">
+                                            <div class="caption-content text-center">
+                                                <h2>Recursos Humanos</h2>
+                                                <div class="divider divider-sm"></div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="portfolioModal-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-10" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content text-white">
+                                            <div class="close" data-dismiss="modal">
+                                                <div class="lr"><div class="rl"></div></div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="modal-body">
                                                     <div class="row">
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-header">
-                                                                <h2 class="modal-title" id="myModalLabel-10">Cursos de Tecnologia</h2>
+                                                                <h2 class="modal-title" id="myModalLabel-10">Recursos Humanos</h2>
                                                                 <div class="divider divider-sm divider-icon divider-white">//</div>
                                                             </div>
                                                             <div class="modal-image">
-                                                                <div class="owl-carousel owl-portfolio-modal">
-                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-5.png') }}" alt="...">
+                                                                <div class="owl-portfolio-modal">
+                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-6.png') }}" alt="...">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-text">
-                                                                <table class="table" cellspacing="0" cellpadding="0" border="0">
-                                                                    <tr>
-                                                                        <td>Dia</td>
-                                                                        <td>Data</td>
-                                                                        <td>Horario</td>
-                                                                        <td>Título</td>
-                                                                        <td>Nome do palestrante</td>
-                                                                        <td>Resumo</td>
-                                                                        <td>Sala</td>
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                </table>
+                                                                {{ desenha_tabela('rh') }}
                                                             </div>
-
                                                             <div class="modal-footer">
-                                                                <p>Copyright ©2015</p>
+                                                                <p></p>
                                                             </div>
                                                             <button type="button" class="btn btn-main" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                                                         </div>
                                                     </div>
-						                            <div class="modal-footer">
-														<p>Copyright ©2014, All Rights Reserved</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- End portfolio modal-6 -->
-
-								<!-- Portfolio item-7 -->
-								<div class="portfolio-item col-sm-6 col-md-4 col-lg-3 wow flipInX" data-wow-delay="0.8s">
-									<a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-7">
-										<img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-7.png') }}" alt="...">
-										<div class="cover"></div>
-										<div class="caption">
-				                            <div class="caption-content text-center">
-				                                <h2>CIÊNCIAS CONTÁBEIS</h2>
-				                                <div class="divider divider-sm"></div>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-				                            </div>
-				                        </div>
-				                    </a>
-								</div>
-
-								<!-- Begin portfolio modal-7 (One Column Portfolio) -->
-								<div class="modal fade" id="portfolioModal-7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-11" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content text-white">
-											<div class="close" data-dismiss="modal">
-								                <div class="lr"><div class="rl"></div></div>
-								            </div>
-											<div class="container">
-												<div class="modal-body text-center">
+                                                    <div class="modal-footer">
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item col-sm-6 col-md-4 col-lg-3 wow flipInX" data-wow-delay="0.8s">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-7">
+                                        <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-7.png') }}" alt="...">
+                                        <div class="cover"></div>
+                                        <div class="caption">
+                                            <div class="caption-content text-center">
+                                                <h2>
+                                                    Ciências Contábeis
+                                                </h2>
+                                                <div class="divider divider-sm"></div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="portfolioModal-7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-11" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content text-white">
+                                            <div class="close" data-dismiss="modal">
+                                                <div class="lr"><div class="rl"></div></div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="modal-body text-center">
                                                     <div class="row">
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-header">
-                                                                <h2 class="modal-title" id="myModalLabel-9">Cursos de Tecnologia</h2>
+                                                                <h2 class="modal-title" id="myModalLabel-9">Ciências Contábeis</h2>
                                                                 <div class="divider divider-sm divider-icon divider-white">//</div>
                                                             </div>
                                                             <div class="modal-image">
-                                                                <div class="owl-carousel owl-portfolio-modal">
-                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-5.png') }}" alt="...">
+                                                                <div class="owl-portfolio-modal">
+                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-7.png') }}" alt="...">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-text">
-                                                                <table class="table" cellspacing="0" cellpadding="0" border="0">
-                                                                    <tr>
-                                                                        <td>Dia</td>
-                                                                        <td>Data</td>
-                                                                        <td>Horario</td>
-                                                                        <td>Título</td>
-                                                                        <td>Nome do palestrante</td>
-                                                                        <td>Resumo</td>
-                                                                        <td>Sala</td>
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                </table>
+                                                                {{ desenha_tabela('contabeis') }}
                                                             </div>
-
                                                             <div class="modal-footer">
-                                                                <p>Copyright ©2015</p>
+                                                                <p></p>
                                                             </div>
                                                             <button type="button" class="btn btn-main" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                                                         </div>
                                                     </div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- End portfolio modal-7 -->
-
-								<!-- Portfolio item-8 -->
-								<div class="portfolio-item col-sm-6 col-md-4 col-lg-3 wow flipInX" data-wow-delay="0.9s">
-									<a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-8">
-										<img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-8.png') }}" alt="...">
-										<div class="cover"></div>
-										<div class="caption">
-				                            <div class="caption-content text-center">
-				                                <h2>Gestão financeira</h2>
-				                                <div class="divider divider-sm"></div>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-				                            </div>
-				                        </div>
-				                    </a>
-								</div>
-
-								<!-- Begin portfolio modal-8 (Single Image Portfolio) -->
-								<div class="modal fade" id="portfolioModal-8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-12" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content text-white">
-											<div class="close" data-dismiss="modal">
-								                <div class="lr"><div class="rl"></div></div>
-								            </div>
-											<div class="container">
-												<div class="modal-body">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item col-sm-6 col-md-4 col-lg-3 wow flipInX" data-wow-delay="0.9s">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-8">
+                                        <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-8.png') }}" alt="...">
+                                        <div class="cover"></div>
+                                        <div class="caption">
+                                            <div class="caption-content text-center">
+                                                <h2>Gestão Financeira</h2>
+                                                <div class="divider divider-sm"></div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="portfolioModal-8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-12" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content text-white">
+                                            <div class="close" data-dismiss="modal">
+                                                <div class="lr"><div class="rl"></div></div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="modal-body">
                                                     <div class="row">
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-header">
-                                                                <h2 class="modal-title" id="myModalLabel-12">Cursos de Tecnologia</h2>
+                                                                <h2 class="modal-title" id="myModalLabel-12">Gestão Financeira</h2>
                                                                 <div class="divider divider-sm divider-icon divider-white">//</div>
                                                             </div>
                                                             <div class="modal-image">
-                                                                <div class="owl-carousel owl-portfolio-modal">
-                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-5.png') }}" alt="...">
+                                                                <div class="owl-portfolio-modal">
+                                                                    <img src="{{ url_for('palestras.static', filename='img/portfolio/portfolio-8.png') }}" alt="...">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-8 col-md-offset-2">
                                                             <div class="modal-text">
-                                                                <table class="table" cellspacing="0" cellpadding="0" border="0">
-                                                                    <tr>
-                                                                        <td>Dia</td>
-                                                                        <td>Data</td>
-                                                                        <td>Horario</td>
-                                                                        <td>Título</td>
-                                                                        <td>Nome do palestrante</td>
-                                                                        <td>Resumo</td>
-                                                                        <td>Sala</td>
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                    <tr>
-
-                                                                        <td>Terça</td>
-                                                                        <td>10/11/2015</td>
-                                                                        <td>19:00h</td>
-                                                                        <td>Uma introdução à Pesquisa Operacional e suas aplicações</td>
-                                                                        <td>Fabricio Biajoli - PrimaSoft</td>
-                                                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</td>
-                                                                        <td>S3</td>
-
-                                                                    </tr>
-
-                                                                </table>
+                                                                {{ desenha_tabela('financeira') }}
                                                             </div>
-
                                                             <div class="modal-footer">
-                                                                <p>Copyright ©2015</p>
+                                                                <p></p>
                                                             </div>
                                                             <button type="button" class="btn btn-main" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                                                         </div>
                                                     </div>
-						                            <div class="modal-footer">
-														<p>Copyright ©2015</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- End portfolio modal-8 -->
-
-
-
-
-
-							</div> <!-- /.row -->
-
-
-
-							<!-- Begin view-more button -->
-							<div class="view-more text-center">
-								<a href="#body-container" class="btn btn-main btn-lg" role="button">Voltar ao inicio</a>
-							</div>
-							<!-- End view-more button -->
-
-
-						</div> <!-- /.container -->
-					</div>
-					<!-- End portfolio -->
-				</section>
-				<!-- End portfolio section -->
-
-
-				<!-- Begin contact section -->
-
-				<!-- End contact section -->
-
+                                                    <div class="modal-footer">
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="view-more text-center">
+                                <a href="#body-container" class="btn btn-main btn-lg" role="button">Voltar ao inicio</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url({{ url_for('palestras.static', filename='img/map-bg.jpg') }});">
                     <div class="cover"></div>
-
-                    <!-- Begin page header-->
                     <div class="page-header-wrapper">
                         <div class="container">
                             <div class="page-header text-center wow bounceInDown" data-wow-delay="0.3s">
@@ -1191,27 +692,20 @@
                             </div>
                         </div>
                     </div>
-                    <!-- End page header-->
-
                     <div class="contact wow bounceInRight" data-wow-delay="0.4s">
                         <div class="container">
                             <div class="row">
-
                                 <div class="col-md-6">
                                     <div class="contact-form">
                                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.579496662163!2d-45.88779710435282!3d-23.18554267918272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4a163ab8fc07%3A0x216390a92e176cf7!2sR.+Francisco+Paes%2C+84+-+Centro%2C+S%C3%A3o+Jos%C3%A9+dos+Campos+-+SP%2C+12210-100!5e0!3m2!1spt-PT!2sbr!4v1445431628959" width="550" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                                     </div>
                                 </div>
-
                                 <div class="col-md-6">
                                     <div class="contact-info">
                                         <h3 class="contact-info-heading">Informações:</h3>
                                         <p>Email: atendimento@bilac.com.br
-
                                             Atendimento: Seg. à Sex. das 08h00 às 21h00
-
                                             Sábado das 08h00 às 13h00.</p>
-
                                         <address>
                                             <i class="fa fa-briefcase"></i> <strong>Bilac Faculdades.</strong><br>
                                             <i class="fa fa-map-marker"></i> R. Francisco Paes, 84, Centro<br>
@@ -1220,104 +714,64 @@
                                         <address>
                                             <i class="fa fa-envelope"></i> <a href="mailto:atendimento@bilac.com.br">atendimento@bilac.com.br</a>
                                         </address>
-
                                         <div class="social-icons">
                                             <a href="mailto:atendimento@bilac.com.br" target="_blank"><i class="fa fa-envelope fa-lg"></i></a>
                                             <a href="https://www.facebook.com/FaculdadeBilac" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
                                             <a href="https://twitter.com/faculdade_bilac" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-
                                         </div>
                                     </div>
                                 </div>
-
-                            </div> <!-- /.row -->
-                        </div><!-- /.container -->
-                    </div>	<!-- /.contact -->
+                            </div>
+                        </div>
+                    </div>
                     <div class="more-space-xxl"></div>
                 </section>
-
-				<!-- Begin footer section -->
-				<footer id="footer">
-					<div class="container text-white">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="copyright">
-									Copyright © Todos os direitos reservados.
-								</div>
-							</div>
+                <footer id="footer">
+                    <div class="container text-white">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="copyright">
+                                    Copyright © Todos os direitos reservados.
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <div class="img-responsive">
                                     <img src="{{ url_for('palestras.static', filename='img/logo-main1.png') }}">
                                 </div>
                             </div>
-
-
-
                         </div>
-					</div>
-				</footer>
-				<!-- End footer section -->
-
-			</div> <!-- /.body-container -->
-		</div> <!-- /.body -->
-
-
-
-
-
-		<!-- Libs and Plugins JS -->
-		<script src="{{ url_for('palestras.static', filename='vendor/jquery/jquery-1.11.1.min.js') }}"></script>
-		<script src="{{ url_for('palestras.static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-
-		<script src="{{ url_for('palestras.static', filename='vendor/owl-carousel/js/owl.carousel.min.js') }}"></script>
-		<script src="{{ url_for('palestras.static', filename='vendor/stallar/jquery.stellar.min.js') }}"></script>
-		<script src="{{ url_for('palestras.static', filename='vendor/animations/js/wow.min.js') }}"></script>
-
-		<script src="{{ url_for('palestras.static', filename='vendor/classie.js') }}"></script>
-		<script src="{{ url_for('palestras.static', filename='vendor/jquery.easing.min.js') }}"></script>
-		<script src="{{ url_for('palestras.static', filename='vendor/waypoints.min.js') }}"></script>
-		<script src="{{ url_for('palestras.static', filename='vendor/jquery.counterup.min.js') }}"></script>
-		<script src="{{ url_for('palestras.static', filename='vendor/typed.js') }}"></script>
-		<script src="{{ url_for('palestras.static', filename='vendor/smoothscroll.js') }}"></script>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="{{ url_for('palestras.static', filename='vendor/jquery/jquery-1.11.1.min.js') }}"></script>
+        <script src="{{ url_for('palestras.static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('palestras.static', filename='vendor/owl-carousel/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ url_for('palestras.static', filename='vendor/stallar/jquery.stellar.min.js') }}"></script>
+        <script src="{{ url_for('palestras.static', filename='vendor/animations/js/wow.min.js') }}"></script>
+        <script src="{{ url_for('palestras.static', filename='vendor/classie.js') }}"></script>
+        <script src="{{ url_for('palestras.static', filename='vendor/jquery.easing.min.js') }}"></script>
+        <script src="{{ url_for('palestras.static', filename='vendor/waypoints.min.js') }}"></script>
+        <script src="{{ url_for('palestras.static', filename='vendor/jquery.counterup.min.js') }}"></script>
+        <script src="{{ url_for('palestras.static', filename='vendor/typed.js') }}"></script>
+        <script src="{{ url_for('palestras.static', filename='vendor/smoothscroll.js') }}"></script>
     <script language="Javascript" type="text/javascript" src="{{ url_for('palestras.static', filename='vendor/countdown/js/jquery.lwtCountdown-1.0.js') }}"></script>
     <script language="Javascript" type="text/javascript" src="{{ url_for('palestras.static', filename='vendor/countdown/js/misc.js') }}"></script>
                 <script>
-
                     jQuery(document).ready(function() {
                         $('#countdown_dashboard').countDown({
                             targetDate: {
-                                'day': 		10,
-                                'month': 	11,
-                                'year': 	2015,
-                                'hour': 	11,
-                                'min': 		0,
-                                'sec': 		0
+                                'day':      10,
+                                'month':    11,
+                                'year':     2015,
+                                'hour':     11,
+                                'min':      0,
+                                'sec':      0
                             }
                         });
-
-                        $('#email_field').focus(email_focus).blur(email_blur);
-                        $('#subscribe_form').bind('submit', function() { return false; });
                     });
-
                 </script>
-
-		<!-- Begin Stylesheet Switcher JS (for demo only). Remove if you do not need it.  -->
-		<script src="{{ url_for('palestras.static', filename='vendor/styleswitch.js') }}"></script>
-		<!--/***********************************************
-		* Style Sheet Switcher v1.1- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
-		* This notice MUST stay intact for legal use
-		* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
-		***********************************************/-->
-		<!-- End Stylesheet Switcher JS -->
-
-		<!-- Theme JS -->
-		<script src="{{ url_for('palestras.static', filename='js/theme.js') }}"></script>
-
-		<!-- Theme custom JS (all your JS customizations) -->
-		<script src="{{ url_for('palestras.static', filename='js/custom.js') }}"></script>
-
-
-
-	</body>
-
+        <script src="{{ url_for('palestras.static', filename='js/theme.js') }}"></script>
+        <script src="{{ url_for('palestras.static', filename='js/custom.js') }}"></script>
+    </body>
 </html>

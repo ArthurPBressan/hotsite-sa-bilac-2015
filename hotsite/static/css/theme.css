@@ -1305,7 +1305,7 @@ video.bgvid {
 
 /* ===== Begin OWL carousel ===== */
 .owl-carousel {
-	cursor: e-resize;
+	/*cursor: e-resize;*/
 }
 .owl-theme .owl-controls {
 	margin-top: 15px;
