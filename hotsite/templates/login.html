@@ -1,3 +1,19 @@
+{% macro messages() %}
+  {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        {% if category %}
+        <div class="alert alert-{{ category }}">
+        {% else %}
+        <div class="alert">
+        {% endif %}
+          <a href="javascript:void(0)" class="close" data-dismiss="alert">x</a>
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+{% endmacro %}
 <html lang="en" style="height: auto;">
     <head>
         <meta charset="utf-8">
@@ -38,13 +54,21 @@
                                 <div class=""><div class="item" style="margin-top: 50px;">
                                     <h1>Login</h1>
                                     <br>
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">RA</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="RA">
-  </div>
-  <button type="submit" class="btn btn-primary">Entrar</button>
-</form>
+                                    {{ messages() }}
+                                    <form method="POST" class="text-center">
+                                        {{ form.hidden_tag() }}
+                                        <div class="form-group">
+                                            {{ form.username.label }}
+                                            {{ form.username(autocomplete="off", autocorrect="off", autocapitalize="off", spellcheck="false", class_="form-control") }}
+                                        </div>
+                                        <div class="form-group">
+                                            {{ form.password.label }}
+                                            {{ form.password(class_='form-control') }}
+                                        </div>
+                                        <p>
+                                            <button type="submit" class="btn btn-primary">Entrar</button>
+                                        </p>
+                                    </form>
                                     <div class="more-space-m"></div>
                                 </div></div>
                             </div>

@@ -1,19 +1,78 @@
-<h1>{{ palestra.titulo }} - {{ palestra.autor }} </h1>
-Dia {{ palestra.dia.strftime('%A').decode('utf-8').title() }} das {{ palestra.hora_inicio.strftime('%H:%Mh') }} até {{ palestra.hora_fim.strftime('%H:%Mh') }}
-<p>
-    {{ palestra.resumo }}
-</p>
-
-<p>
-    {{ palestra.bio_autor }}
-</p>
-
-<form action="{{ url_for('palestras.rate_palestra', palestra=palestra.id) }}" method="POST">
-    <textarea name="comentario"></textarea>
-    <button type="submit" name="rating" value="1">
-        Gostei
-    </button>
-    <button type="submit" name="rating" value="-1">
-        Não gostei
-    </button>
-</form>
+<html lang="en" style="height: auto;">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Semana Acadêmica - BILAC Faculdades</title>
+        <meta name="description" content="Bootstrap HTML5 Template">
+        <meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template">
+        <meta name="author" content="themetorium.net">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/vendor/animations/css/animate.min.css">
+        <link rel="stylesheet" href="/static/vendor/font-awesome/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/vendor/owl-carousel/css/owl.carousel.css">
+        <link rel="stylesheet" href="/static/vendor/owl-carousel/css/owl.theme.css">
+        <link rel="Stylesheet" type="text/css" href="/static/vendor/countdown/style/main.css">
+        <link rel="stylesheet" href="/static/css/theme.css">
+        <link rel="stylesheet" href="/static/css/mobile.css">
+        <link rel="stylesheet" href="/static/css/custom.css">
+    </head>
+    <body data-spy="scroll" data-target="#main-navbar">
+        <div class="page-loader" style="display: none;"></div>
+        <div class="body">
+            <div id="body-container">
+                <header id="header" class="header-main">
+                    <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top navbar-transparent" role="navigation">
+                    </nav>
+                </header>
+                <section id="" class="parallax" style="opacity: 1; /* background-image: url(http://159.203.118.4/static/img/bg-index3.jpg); */ background-position: 0px 0px;height: 100%;      background-color: #171717;">
+                    <div class="cover"><div class="cover-inner"></div></div>
+                    <div class="container" style="max-width: 600px;">
+                        <div class="caption text-center text-white" data-stellar-ratio="0.7" style="top: 333.5px; display: block;">
+                            <div class="" style="opacity: 1; display: block;" id="">
+                                <div class=""><div class="item" style="margin-top: 50px;">
+                                    <h1>Título - Autor</h1>
+                                    <h3><strong>RESUMO</strong></h3><br>
+                                    <h3><strong>BIO</strong></h3>
+                                    <form action="/2" method="POST">
+                                        <textarea name="comentario" class="form-control" rows="3"></textarea>
+                                            <a href="http://159.203.118.4/">
+                                      <i class="fa fa-thumbs-up fa-3x" name="rating" value="1" style="
+                                        color: white;
+                                    "></i></a>
+                                        <a href="http://159.203.118.4/">
+                                      <i class="fa fa-thumbs-down fa-3x" name="rating" value="1" style="
+                                        color: white;
+                                    "></i></a>
+                                    </form>
+                                    <div class="more-space-m"></div>
+                                </div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <script src="/static/vendor/jquery/jquery-1.11.1.min.js"></script>
+        <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/static/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+        <script src="/static/vendor/stallar/jquery.stellar.min.js"></script>
+        <script src="/static/vendor/animations/js/wow.min.js"></script>
+        <script src="/static/vendor/classie.js"></script>
+        <script src="/static/vendor/jquery.easing.min.js"></script>
+        <script src="/static/vendor/waypoints.min.js"></script>
+        <script src="/static/vendor/jquery.counterup.min.js"></script>
+        <script src="/static/vendor/typed.js"></script>
+        <script src="/static/vendor/smoothscroll.js"></script>
+        <script language="Javascript" type="text/javascript" src="/static/vendor/countdown/js/jquery.lwtCountdown-1.0.js"></script>
+        <script language="Javascript" type="text/javascript" src="/static/vendor/countdown/js/misc.js"></script>
+        <script src="/static/vendor/styleswitch.js"></script>
+        <script src="/static/js/theme.js"></script>
+        <script src="/static/js/custom.js"></script>
+    </body>
+</html>
