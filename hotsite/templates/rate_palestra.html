@@ -36,19 +36,26 @@
                         <div class="caption text-center text-white" data-stellar-ratio="0.7" style="top: 333.5px; display: block;">
                             <div class="" style="opacity: 1; display: block;" id="">
                                 <div class=""><div class="item" style="margin-top: 50px;">
-                                    <h1>Título - Autor</h1>
-                                    <h3><strong>RESUMO</strong></h3><br>
-                                    <h3><strong>BIO</strong></h3>
-                                    <form action="/2" method="POST">
-                                        <textarea name="comentario" class="form-control" rows="3"></textarea>
-                                            <a href="http://159.203.118.4/">
-                                      <i class="fa fa-thumbs-up fa-3x" name="rating" value="1" style="
-                                        color: white;
-                                    "></i></a>
-                                        <a href="http://159.203.118.4/">
-                                      <i class="fa fa-thumbs-down fa-3x" name="rating" value="1" style="
-                                        color: white;
-                                    "></i></a>
+                                    <h1>{{ palestra.titulo }}</h1>
+                                    <h2>{{ palestra.autor }}</h2>
+                                    <p>
+                                        {{ palestra.resumo }}
+                                    </p>
+                                    <p style="margin-bottom: 100px;">
+                                        {{ palestra.bio_autor }}
+                                    </p>
+                                    <h1 style="margin-bottom: 30px;">Dê a sua avaliação!</h1>
+                                    <form action="{{ url_for('palestras.rate_palestra', palestra=palestra.id) }}" method="POST">
+                                        <textarea name="comentario" class="form-control" rows="5" style="margin-bottom: 10px"></textarea>
+                                        <button type="submit" name="rating" value="-1" class="btn btn-danger">
+                                            <i class="fa fa-thumbs-down fa-3x" name="rating" value="1" style="color: white;"></i>
+                                        </button>
+                                        <span style="margin-left: 10px; margin-right: 10px;">
+
+                                        </span>
+                                        <button type="submit" name="rating" value="1" class="btn btn-success">
+                                            <i class="fa fa-thumbs-up fa-3x" name="rating" value="1" style="color: white;"></i>
+                                        </button>
                                     </form>
                                     <div class="more-space-m"></div>
                                 </div></div>
