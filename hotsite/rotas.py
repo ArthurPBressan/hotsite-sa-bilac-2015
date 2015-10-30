@@ -31,7 +31,12 @@ def favicon():
     return redirect(url_for('.static', filename='img/favicon.ico'))
 
 
-@bp.route('/<palestra>', methods=['GET', 'POST'])
+@bp.route('/login/')
+def login():
+    return redirect(url_for('auth.login'))
+
+
+@bp.route('/avaliar/<palestra>', methods=['GET', 'POST'])
 @login_required
 def rate_palestra(palestra):
     palestra = Palestra.query.get_or_404(palestra)
