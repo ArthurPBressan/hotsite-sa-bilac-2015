@@ -6,6 +6,9 @@
                 Dia
             </th>
             <th>
+                Período
+            </th>
+            <th>
                 Horário
             </th>
             <th>
@@ -20,6 +23,15 @@
         <tr>
             <td>
                 {{ palestra.dia.strftime('%A').decode('utf-8').title() }}
+            </td>
+            <td>
+                {% if palestra.hora_inicio.hour < 12 %}
+                    Manhã
+                {% elif palestra.hora_inicio.hour >= 12 and palestra.hora_inicio.hour < 18 %}
+                    Tarde
+                {% else %}
+                    Noite
+                {% endif %}
             </td>
             <td>
                 {{ palestra.hora_inicio.strftime('%H:%Mh') }}
