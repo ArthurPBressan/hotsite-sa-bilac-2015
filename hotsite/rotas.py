@@ -36,11 +36,14 @@ def login():
     return redirect(url_for('auth.login'))
 
 
-@bp.route('/avaliar/<palestra>', methods=['GET', 'POST'])
+@bp.route('/palestras/<titulo_slug>', methods=['GET', 'POST'])
 @login_required
-def rate_palestra(palestra):
-    palestra = Palestra.query.get_or_404(palestra)
-    if request.method == 'POST':
+def rate_palestra(titulo_slug):
+    palestra = Palestra.query.filter_by(titulo_slug=titulo_slug).one()
+    palestra_aluno = PalestraAluno.query \
+        .filter_by(palestra_id=palestra.id, aluno_id=current_user.id) \
+        .first()
+    if request.method == 'POST' and not palestra_aluno:
         comentario = request.form['comentario']
         rating = int(request.form['rating'])
         palestra_aluno = PalestraAluno(palestra_id=palestra.id, rating=rating,
@@ -48,5 +51,5 @@ def rate_palestra(palestra):
                                        aluno_id=current_user.id)
         db.session.add(palestra_aluno)
         db.session.commit()
-        return redirect(url_for('.index'))
-    return render_template('rate_palestra.html', palestra=palestra)
+    return render_template('rate_palestra.html', palestra=palestra,
+                           palestra_aluno=palestra_aluno)
