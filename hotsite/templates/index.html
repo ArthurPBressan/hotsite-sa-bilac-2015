@@ -1,54 +1,119 @@
 <!DOCTYPE html>
 {% macro desenha_tabela(trilha) %}
-    <table class="table" cellspacing="0" cellpadding="0" border="0">
-        <tr>
-            <th>
-                Dia
-            </th>
-            <th>
-                Período
-            </th>
-            <th>
-                Horário
-            </th>
-            <th>
-                Titulo
-            </th>
-            <th>
-                Autor
-            </th>
-            <th></th>
-        </tr>
-    {% for palestra in palestras[trilha] %}
-        <tr>
-            <td>
-                {{ palestra.dia.strftime('%A').decode('utf-8').title() }}
-            </td>
-            <td>
-                {% if palestra.hora_inicio.hour < 12 %}
-                    Manhã
-                {% elif palestra.hora_inicio.hour >= 12 and palestra.hora_inicio.hour < 18 %}
-                    Tarde
-                {% else %}
-                    Noite
-                {% endif %}
-            </td>
-            <td>
-                {{ palestra.hora_inicio.strftime('%H:%Mh') }}
-            </td>
-            <td>
-                {{ palestra.titulo }}
-            </td>
-            <td>
-                {{ palestra.autor }}
-            </td>
-            <td>
-                <a href="{{ url_for('palestras.rate_palestra', palestra=palestra.id) }}" >Avaliar </a>
-            </td>
-        </tr>
-    {% endfor %}
-    </table>
+<div class="services">
+						<div class="container">
+                        {% for palestra in palestras[trilha] %}
+    <div class="row">
+
+								<div class="col-md-2">
+									<div class="info-box-2 square-icon wow fadeInUp" data-wow-delay="0.5s">
+										<div class="info-box-heading">
+											<span class="info-box-icon"><i class="fa fa-calendar-times-o"></i></span>
+											<h4>Dia</h4>
+										</div>
+										<div class="info-box-info">
+											<p>{{ palestra.dia.strftime('%A').decode('utf-8').title() }}</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-2">
+									<div class="info-box-2 square-icon wow fadeInUp" data-wow-delay="0.5s">
+										<div class="info-box-heading">
+											<span class="info-box-icon"><i class="fa fa-calendar-check-o"></i></span>
+											<h4>Período</h4>
+										</div>
+										<div class="info-box-info">
+											<p>{% if palestra.hora_inicio.hour < 12 %}
+                   							 Manhã
+                							{% elif palestra.hora_inicio.hour >= 12 and palestra.hora_inicio.hour < 18 %}
+                    						Tarde
+                							{% else %}
+                    						Noite
+                							{% endif %}.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-2">
+									<div class="info-box-2 square-icon wow fadeInUp" data-wow-delay="0.5s">
+										<div class="info-box-heading">
+											<span class="info-box-icon"><i class="fa fa-hourglass-o"></i></span>
+											<h4>Horário</h4>
+										</div>
+										<div class="info-box-info">
+											<p>{{ palestra.hora_inicio.strftime('%H:%Mh') }}</p>
+										</div>
+									</div>
+								</div>
+                                                            
+                                                            <div class="col-md-2">
+									<div class="info-box-2 square-icon wow fadeInUp" data-wow-delay="0.6s">
+										<div class="info-box-heading">
+											<span class="info-box-icon"><i class="fa fa-map-signs"></i></span>
+											<h4>Titulo</h4>
+										</div>
+										<div class="info-box-info">
+											<p>{{ palestra.titulo }}</p>
+										</div>
+									</div>
+								</div>
+                                                            
+                                                            <div class="col-md-2">
+									<div class="info-box-2 square-icon wow fadeInUp" data-wow-delay="0.6s">
+										<div class="info-box-heading">
+											<span class="info-box-icon"><i class="fa fa-user"></i></span>
+											<h4>Autor</h4>
+										</div>
+										<div class="info-box-info">
+											<p>{{ palestra.autor }}</p>
+										</div>
+									</div>
+								</div>
+                                                            <div class="col-md-2">
+									<div class="info-box-2 square-icon wow fadeInUp" data-wow-delay="0.6s">
+										<div class="info-box-heading">
+											<span class="info-box-icon"><i class="fa fa-users"></i></span>
+											<h4></h4>
+										</div>
+										<div class="info-box-info">
+                                        <br>
+											<p><a class="btn btn-success" href="{{ url_for('palestras.rate_palestra', palestra=palestra.id) }}" >Avaliar </a></p>
+										</div>
+									</div>
+                                    
+								</div>
+
+							</div>
+ {% endfor %}
+                            
+                            </div>
+    					</div>
 {% endmacro %}
+    
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+    
+    </table>
+    	
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -102,7 +167,7 @@
                 </header>
                 <section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url({{ url_for('palestras.static', filename='img/bg-index3.jpg') }}); opacity: 1.0">
                     <div class="cover"><div class="cover-inner"></div></div>
-                    <div class="container">
+                    <div class="container">:00h
                         <div class="caption text-center text-white" data-stellar-ratio="0.7">
                             <div id="owl-intro-text" class="owl-carousel">
                                 <div class="item">
@@ -133,6 +198,12 @@
                                 <div class="divider divider-icon divider-md">//</div>
                                 <p class="lead text-gray">
                                     De 10 a 13 de novembro, a Faculdade Bilac realiza a 9ª Semana Acadêmica. O evento, que acontecerá na própria instituição, oferecerá mais de 70 palestras e oficinas sobre os mais diversos temas, incluindo carreiras, saúde, finanças e tecnologia.
+
+                                    Na programação, haverá palestra sobre Mercado de Ações – promovida pelo IBOVESPA, Comportamento Empreendedor – ministrado pelo Sebrae, além de temas como Programação Neurolínguistica, Estratégias de Marketing e Publicidade Digital, apresentados pelos próprios alunos.
+
+                                    Segundo o diretor da Faculdade, Felipe Barros, esta semana é uma ótima oportunidade para a integração universitária. “Semanas acadêmicas são momentos para agregar conhecimento e conhecer melhor as áreas de atuação profissional. Por isso a importância destes encontros para a troca de aprendizado”.
+
+                                    As atividades acontecerão das 8h às 22h30. Cada aluno poderá levar um convidado para participar.
                                 </p>
                                 <p class="lead text-gray">
                                     “Semanas acadêmicas são momentos para agregar conhecimento e conhecer melhor as áreas de atuação profissional. Por isso a importância destes encontros para a troca de aprendizado”.
