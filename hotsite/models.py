@@ -6,8 +6,11 @@ from flask.ext.login import make_secure_token, UserMixin
 from sqlalchemy import Column, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.types import Integer, String, Date, Text, Time
+from slugify import Slugify
 
 from hotsite.base import db
+
+slug = Slugify(to_lower=True)
 
 
 def init_app(app):
@@ -53,6 +56,13 @@ class Palestra(db.Model):
 
     trilha = Column(String(255))
     titulo = Column(String(255))
+    titulo_slug = Column(String(255))
+
+    @db.validates('titulo')
+    def slugify_titulo(self, key, value):
+        self.titulo_slug = slug(value)
+        return value
+
     resumo = Column(Text)
     bio_autor = Column(Text)
     autor = Column(String(255))

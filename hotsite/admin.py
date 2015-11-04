@@ -36,7 +36,7 @@ class AlunoView(_ModelView):
 
 
 class PalestraView(_ModelView):
-    form_excluded_columns = ['alunos']
+    form_excluded_columns = ['alunos', 'titulo_slug']
 
     model = Palestra
     name = 'Palestra'
