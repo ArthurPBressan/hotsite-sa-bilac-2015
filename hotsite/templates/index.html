@@ -6,23 +6,29 @@
                 Dia
             </th>
             <th>
-                Período
+                Titulo
             </th>
             <th>
                 Horário
             </th>
             <th>
-                Titulo
+                Período
             </th>
             <th>
                 Autor
             </th>
-            <th></th>
         </tr>
     {% for palestra in palestras[trilha] %}
         <tr>
             <td>
                 {{ palestra.dia.strftime('%A').decode('utf-8').title() }}
+            </td>
+            <td>
+                {{ palestra.titulo }}
+                <p><a href="{{ url_for('palestras.rate_palestra', palestra=palestra.id) }}" class="btn btn-success">Avalie Aqui! </a></p>
+            </td>
+            <td>
+                {{ palestra.hora_inicio.strftime('%H:%Mh') }}
             </td>
             <td>
                 {% if palestra.hora_inicio.hour < 12 %}
@@ -34,16 +40,7 @@
                 {% endif %}
             </td>
             <td>
-                {{ palestra.hora_inicio.strftime('%H:%Mh') }}
-            </td>
-            <td>
-                {{ palestra.titulo }}
-            </td>
-            <td>
                 {{ palestra.autor }}
-            </td>
-            <td>
-                <a href="{{ url_for('palestras.rate_palestra', palestra=palestra.id) }}" >Avaliar </a>
             </td>
         </tr>
     {% endfor %}
