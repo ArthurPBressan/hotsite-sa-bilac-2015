@@ -26,7 +26,7 @@ def importar_usuarios(filename):
     from hotsite.base import db
     from hotsite.models import Aluno
     from unicodecsv import DictReader
-    with open(filename, 'rb') as csvfile:
+    with open(filename, 'rU') as csvfile:
         csvreader = DictReader(csvfile)
         for row in csvreader:
             nome, ra, password = row['Nome'], row['RA'], row['CPF']
