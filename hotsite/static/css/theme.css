@@ -811,7 +811,8 @@ video.bgvid {
 	height: 100%;
 	top: 0;
 	left: 0;
-	opacity: 0;
+	opacity: 0.75;
+    color: #000;
 	padding: 0;
 	background: #fff;
 	-webkit-transition: all ease .5s;
@@ -831,15 +832,15 @@ video.bgvid {
 	text-align: center;
 	font-size: 14px;
 	color: #222;
-	-webkit-transform: scale(0);
-	-moz-transform: scale(0);
-	-o-transform: scale(0);
-	-ms-transform: scale(0);
-	transform: scale(0);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
 	-webkit-transition: all ease .4s;
 	-moz-transition: all ease .4s;
 	transition: all ease .4s;
-	opacity: 0;
+	opacity: 1;
 }
 .portfolio .portfolio-item .caption:hover .caption-content {
 	-webkit-transform: scale(1);
