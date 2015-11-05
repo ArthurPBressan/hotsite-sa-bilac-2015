@@ -61,7 +61,7 @@
                                         {% endif %}
                                     {% else %}
                                         <h1 style="margin-bottom: 30px;">Dê a sua avaliação!</h1>
-                                        <form action="{{ url_for('palestras.rate_palestra', titulo_slug=palestra.titulo_slug) }}" method="POST">
+                                        <form action="{{ url_for('palestras.rate_palestra', palestra=palestra.id) }}" method="POST">
                                             <textarea name="comentario" class="form-control" rows="5" style="margin-bottom: 10px"></textarea>
                                             <button type="submit" name="rating" value="-1" class="btn btn-danger">
                                                 <i class="fa fa-thumbs-down fa-3x" name="rating" value="1" style="color: white;"></i>

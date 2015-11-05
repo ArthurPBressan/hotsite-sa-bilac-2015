@@ -43,7 +43,7 @@
                 {{ palestra.autor }}
             </td>
             <td>
-                <a href="{{ url_for('palestras.rate_palestra', titulo_slug=palestra.titulo_slug) }}" >Avaliar </a>
+                <a href="{{ url_for('palestras.rate_palestra', palestra=palestra.id) }}" >Avaliar </a>
             </td>
         </tr>
     {% endfor %}

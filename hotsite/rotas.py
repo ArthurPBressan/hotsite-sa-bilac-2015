@@ -36,10 +36,10 @@ def login():
     return redirect(url_for('auth.login'))
 
 
-@bp.route('/palestras/<titulo_slug>', methods=['GET', 'POST'])
+@bp.route('/palestras/<palestra>', methods=['GET', 'POST'])
 @login_required
-def rate_palestra(titulo_slug):
-    palestra = Palestra.query.filter_by(titulo_slug=titulo_slug).one()
+def rate_palestra(palestra):
+    palestra = Palestra.query.get_or_404(palestra)
     palestra_aluno = PalestraAluno.query \
         .filter_by(palestra_id=palestra.id, aluno_id=current_user.id) \
         .first()
