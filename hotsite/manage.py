@@ -16,7 +16,7 @@ def criar_admin():
 def deletar_admin():
     from hotsite.models import Aluno
     from hotsite.base import db
-    admin = Aluno.query.filter_by(ra='admin')
+    admin = Aluno.query.filter_by(ra='admin').first()
     db.session.delete(admin)
     db.session.commit()
 
