@@ -63,15 +63,19 @@
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="{{ url_for('palestras.static', filename='img/favicon.ico')}}" type="image/x-icon">
         <link rel="icon" href="{{ url_for('palestras.static', filename='img/favicon.ico')}}" type="image/x-icon">
-        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/animations/css/animate.min.css') }}">
-        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/font-awesome/font-awesome.min.css') }}">
-        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/owl-carousel/css/owl.carousel.css') }}">
-        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='vendor/owl-carousel/css/owl.theme.css') }}">
-        <link rel="Stylesheet" type="text/css" href="{{ url_for('palestras.static', filename='vendor/countdown/style/main.css') }}">
-        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='css/theme.css') }}">
-        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='css/mobile.css') }}">
-        <link rel="stylesheet" href="{{ url_for('palestras.static', filename='css/custom.css') }}">
+        {% assets filters="cssmin", output="gen/packed.css",
+            "vendor/bootstrap/css/bootstrap.min.css",
+            "vendor/animations/css/animate.min.css",
+            "vendor/font-awesome/font-awesome.min.css",
+            "vendor/owl-carousel/css/owl.carousel.css",
+            "vendor/owl-carousel/css/owl.theme.css",
+            "vendor/countdown/style/main.css",
+            "css/theme.css",
+            "css/mobile.css",
+            "css/custom.css"
+          %}
+            <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+        {% endassets %}
     </head>
     <body data-spy="scroll" data-target="#main-navbar">
         <div class="page-loader"></div>
@@ -652,18 +656,22 @@
                 </footer>
             </div>
         </div>
-        <script src="{{ url_for('palestras.static', filename='vendor/jquery/jquery-1.11.1.min.js') }}"></script>
-        <script src="{{ url_for('palestras.static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-        <script src="{{ url_for('palestras.static', filename='vendor/owl-carousel/js/owl.carousel.min.js') }}"></script>
-        <script src="{{ url_for('palestras.static', filename='vendor/stallar/jquery.stellar.min.js') }}"></script>
-        <script src="{{ url_for('palestras.static', filename='vendor/animations/js/wow.min.js') }}"></script>
-        <script src="{{ url_for('palestras.static', filename='vendor/classie.js') }}"></script>
-        <script src="{{ url_for('palestras.static', filename='vendor/jquery.easing.min.js') }}"></script>
-        <script src="{{ url_for('palestras.static', filename='vendor/waypoints.min.js') }}"></script>
-        <script src="{{ url_for('palestras.static', filename='vendor/jquery.counterup.min.js') }}"></script>
-        <script src="{{ url_for('palestras.static', filename='vendor/typed.js') }}"></script>
-        <script src="{{ url_for('palestras.static', filename='vendor/smoothscroll.js') }}"></script>
-        <script src="{{ url_for('palestras.static', filename='js/theme.js') }}"></script>
-        <script src="{{ url_for('palestras.static', filename='js/custom.js') }}"></script>
+        {% assets filters="rjsmin", output='gen/packed.js',
+            'vendor/jquery/jquery-1.11.1.min.js',
+            'vendor/bootstrap/js/bootstrap.min.js',
+            'vendor/owl-carousel/js/owl.carousel.min.js',
+            'vendor/stallar/jquery.stellar.min.js',
+            'vendor/animations/js/wow.min.js',
+            'vendor/classie.js',
+            'vendor/jquery.easing.min.js',
+            'vendor/waypoints.min.js',
+            'vendor/jquery.counterup.min.js',
+            'vendor/typed.js',
+            'vendor/smoothscroll.js',
+            'js/theme.js',
+            'js/custom.js'
+         %}
+         <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+        {% endassets %}
     </body>
 </html>
