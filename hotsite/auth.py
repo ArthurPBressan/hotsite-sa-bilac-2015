@@ -52,7 +52,8 @@ def criar_admin():
 
 class LoginForm(Form):
     username = TextField(u'RA', [validators.Required(message='RA requerido')])
-    password = PasswordField(u'Senha do Portal', [validators.Required(message='Senha requerida')])
+    password = PasswordField(u'Cinco Primeiros Dígitos do CPF',
+                             [validators.Required(message='Senha requerida')])
 
     def __init__(self, **kwargs):
         Form.__init__(self, **kwargs)

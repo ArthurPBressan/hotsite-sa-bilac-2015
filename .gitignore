@@ -1,3 +1,4 @@
+*.csv
 */static/.webassets-cache/
 */static/gen/
 *.sublime-*
