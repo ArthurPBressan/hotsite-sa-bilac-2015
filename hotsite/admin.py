@@ -30,6 +30,7 @@ class _ModelView(ModelView):
 class AlunoView(_ModelView):
 
     form_excluded_columns = ['palestras', 'password']
+    column_filters = ['ra', 'nome']
 
     model = Aluno
     name = 'Aluno'
