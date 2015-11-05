@@ -13,6 +13,15 @@ def criar_admin():
 
 
 @manager.command
+def deletar_admin():
+    from hotsite.models import Aluno
+    from hotsite.base import db
+    admin = Aluno.query.filter_by(ra='admin')
+    db.session.delete(admin)
+    db.session.commit()
+
+
+@manager.command
 def importar_usuarios(filename):
     from hotsite.base import db
     from hotsite.models import Aluno

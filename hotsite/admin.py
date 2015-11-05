@@ -29,7 +29,7 @@ class _ModelView(ModelView):
 
 class AlunoView(_ModelView):
 
-    form_excluded_columns = ['palestras']
+    form_excluded_columns = ['palestras', 'password']
 
     model = Aluno
     name = 'Aluno'
