@@ -5,8 +5,6 @@ import locale
 locale.setlocale(locale.LC_ALL, ('pt_BR', 'UTF-8'))
 
 from flask import Flask
-from flask.ext.assets import Environment
-from raven.contrib.flask import Sentry
 
 from hotsite import base, models, admin, rotas, auth
 
@@ -22,9 +20,6 @@ def create_app(config=None):
     @app.route('/')
     def index():
         return rotas.index()
-
-    Environment(app)
-    Sentry(app)
 
     base.init_app(app)
     auth.init_app(app)
