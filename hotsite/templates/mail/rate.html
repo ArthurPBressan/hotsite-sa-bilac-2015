@@ -1,0 +1,15 @@
+<p>
+    A palestra <b>{{ palestra_aluno.palestra.titulo }}</b> recebeu uma avaliação do aluno <b>{{ palestra_aluno.aluno.nome }}</b> (<b>{{ palestra_aluno.aluno.ra }}</b>)
+</p>
+
+
+<p>
+    A avaliação foi: <b>{{ 'Positiva' if palestra_aluno.rating > 0 else 'Negativa' }}</b>
+</p>
+
+{% if palestra_aluno.comentario %}
+    Além disso foi deixado o seguinte comentário:
+    <p>
+        {{ palestra_aluno.comentario }}
+    </p>
+{% endif %}

@@ -1,11 +1,13 @@
 # coding: UTF-8
 from __future__ import absolute_import
 
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, \
+    current_app
 from flask.ext.login import login_required, current_user
 
 from hotsite.models import Palestra, PalestraAluno
 from hotsite.base import db
+from hotsite.utils import send_mail
 
 bp = Blueprint('palestras', __name__, static_folder='static')
 
@@ -51,5 +53,8 @@ def rate_palestra(palestra):
                                        aluno_id=current_user.id)
         db.session.add(palestra_aluno)
         db.session.commit()
+        recipients = current_app.config.get('MAIL_DEFAULT_RATE_RECIPIENTS')
+        send_mail('rate.html', {'palestra_aluno': palestra_aluno},
+                  u'Nova avaliação de palestra', recipients)
     return render_template('rate_palestra.html', palestra=palestra,
                            palestra_aluno=palestra_aluno)
